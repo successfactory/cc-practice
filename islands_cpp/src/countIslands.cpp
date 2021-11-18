@@ -22,7 +22,7 @@ int CIslandCounter::getIslands()
 
   for(int i = 0; i < rows(); i++) {
     for(int j = 0; j < cols(); j++) {
-      if(M[i][j] == 1) {
+      if(M[i][j] > 0) {
         markIslands(rows(), cols(), i, j);
         islands++;
       }
