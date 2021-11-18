@@ -1,4 +1,4 @@
-#define "defines.h"
+#include "defines.h"
 
 #ifndef COUNTISLANDS_H
 #define COUNTISLANDS_H
