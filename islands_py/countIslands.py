@@ -1,8 +1,6 @@
 class CIslandCounter:
     def __init__(self, binaryMatrix):
         self.M = binaryMatrix
-        from collections import namedtuple
-        self.pair = namedtuple("pair", ["first", "second"])
 
     def getIslands(self):
         islands = 0
@@ -21,11 +19,11 @@ class CIslandCounter:
 
     def __markIslands(self, rows, cols, i, j):
         q = []
-        q.append(self.pair(i, j))
+        q.append((i, j))
         while len(q) > 0:
             item = q.pop(0)
-            x = item.first
-            y = item.second
+            x = item[0]
+            y = item[1]
             if self.M[x][y] == 1:
                 self.M[x][y] = -1
                 self.__pushIfValid(q, rows, cols, x - 1, y - 1)
@@ -39,7 +37,7 @@ class CIslandCounter:
 
     def __pushIfValid(self, q, rows, cols, x, y):
         if x >= 0 and x < rows and y >= 0 and y < cols:
-            q.append(self.pair(x, y))
+            q.append((x, y))
 
 
 if __name__ == "__main__":
