@@ -1,4 +1,4 @@
-class CIslandCounter:
+class IslandCounter:
     def __init__(self, binaryMatrix):
         self.M = binaryMatrix
 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
          [1, 1, 0, 1, 0, 1],
          [0, 0, 0, 1, 0, 0]]
 
-    c = CIslandCounter(M)
+    c = IslandCounter(M)
 
     for i in range(c.rows()+2):
         for j in range(c.cols()+2):
