@@ -10,7 +10,7 @@ class CountIslandsTest(unittest.TestCase):
              [0, 0, 0, 0, 0, 1],
              [1, 1, 0, 1, 0, 1],
              [0, 0, 0, 1, 0, 0]]
-        c = countIslands.CIslandCounter(M)
+        c = countIslands.IslandCounter(M)
         self.assertEqual(6, c.getIslands())
 
     def test_countIslands_OpenSea(self):
@@ -20,7 +20,7 @@ class CountIslandsTest(unittest.TestCase):
              [0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0]]
-        c = countIslands.CIslandCounter(M)
+        c = countIslands.IslandCounter(M)
         self.assertEqual(0, c.getIslands())
 
     def test_countIslands_Checkers(self):
@@ -30,7 +30,7 @@ class CountIslandsTest(unittest.TestCase):
              [0, 1, 0, 1, 0, 1],
              [1, 0, 1, 0, 1, 0],
              [0, 1, 0, 1, 0, 1]]
-        c = countIslands.CIslandCounter(M)
+        c = countIslands.IslandCounter(M)
         self.assertEqual(1, c.getIslands())
 
     def test_countIslands_MainLand(self):
@@ -40,7 +40,7 @@ class CountIslandsTest(unittest.TestCase):
              [1, 1, 1, 1, 1, 1],
              [1, 1, 1, 1, 1, 1],
              [1, 1, 1, 1, 1, 1]]
-        c = countIslands.CIslandCounter(M)
+        c = countIslands.IslandCounter(M)
         self.assertEqual(1, c.getIslands())
 
     def test_countIslands_Lake(self):
@@ -50,7 +50,7 @@ class CountIslandsTest(unittest.TestCase):
              [1, 0, 0, 0, 0, 1],
              [1, 1, 0, 0, 1, 1],
              [1, 1, 1, 1, 1, 1]]
-        c = countIslands.CIslandCounter(M)
+        c = countIslands.IslandCounter(M)
         self.assertEqual(1, c.getIslands())
 
     def test_countIslands_LakeIsland(self):
@@ -60,5 +60,5 @@ class CountIslandsTest(unittest.TestCase):
              [1, 0, 0, 2, 0, 1],
              [1, 1, 0, 0, 1, 1],
              [1, 1, 1, 1, 1, 1]]
-        c = countIslands.CIslandCounter(M)
+        c = countIslands.IslandCounter(M)
         self.assertEqual(2, c.getIslands())
