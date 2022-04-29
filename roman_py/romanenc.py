@@ -5,5 +5,5 @@ def encode(year):
 
 
 if __name__ == "__main__":
-    year = 2020
+    year = 2022
     print(f"Current Year {year} in Roman literals: {encode(year)}\n")

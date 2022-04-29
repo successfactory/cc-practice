@@ -4,7 +4,7 @@
 
 int main()
 {
-    int year = 2020;
+    int year = 2022;
     printf("Current Year (%d) in Roman literals: %s\n", year, romanenc(year));
     return 0;
 }
